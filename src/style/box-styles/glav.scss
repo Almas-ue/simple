@@ -1,0 +1,53 @@
+.glav {
+    margin-top: 60px;
+
+    .glav_inner {
+        display: flex;
+        gap: 30px;
+
+        .glav_text {
+            padding-top: 70px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 445px;
+            align-items: flex-start;
+        }
+
+        .img_glav {
+            img {
+                position: absolute;
+                z-index: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1031px) {
+    .glav_inner {
+        .glav_text {
+            .glav_title {
+                // font-size: 50px;
+            }
+        }
+
+        .img_glav {
+            img {
+                max-width: 300px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 778px) {
+    .glav_inner {
+        .img_glav {
+            img {
+                max-width: 270px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 510px) {
+}

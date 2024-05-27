@@ -1,0 +1,107 @@
+$first_c_text: #4c5866;
+$second_c_text: #85859b;
+$three_c_text: #b5b5bd;
+$btn_color: #7875fe;
+$focus_color: #dad9fb;
+$active_color: #4946b4;
+
+@mixin button($pad_block, $pad_line, $border_color, $back_color) {
+    padding: $pad_block $pad_line;
+    border: 1px solid $border_color;
+    color: $btn_color;
+    background-color: $back_color;
+}
+
+@mixin hover_btn() {
+    &:hover {
+        background-color: $btn_color;
+        color: #fff;
+    }
+}
+
+@mixin focus_btn() {
+    &:hover {
+        background-color: $focus_color;
+        span,
+        a {
+            color: $btn_color;
+        }
+    }
+}
+
+@mixin active_btn() {
+    &:hover {
+        background-color: $active_color;
+        span,
+        a {
+            color: #fff;
+        }
+    }
+}
+
+@mixin hover_text() {
+    &:hover {
+        color: $btn_color;
+        stroke: $btn_color;
+    }
+}
+
+@mixin focus_text() {
+    &:focus {
+        background-color: $focus_color;
+        color: $first_c_text;
+    }
+}
+
+@mixin active_text() {
+    &:active {
+        color: $active_color;
+    }
+}
+
+.btn {
+    @include button(23.5px, 90px, $btn_color, transparent);
+    transition: 0.4s;
+    @include active_btn();
+    @include hover_btn();
+    // @include focus_btn();
+
+
+
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.title_h1 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 100%;
+    color: #4c5866;
+}
+
+.title_h2 {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    color: #666;
+}
+
+.title_h3 {
+    font-weight: 400;
+    font-size: 30px;
+    color: #666;
+}
+
+.title_h4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #666;
+}
+
+.desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170%;
+    color: #85859b;
+}

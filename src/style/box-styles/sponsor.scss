@@ -1,0 +1,20 @@
+@import "./../var.scss";
+
+.sponsor {
+    background-color: #ebebeb;
+    padding-block: 90px;
+
+    .list-sponsor {
+        display: flex;
+        justify-content: space-between;
+
+        .sponsor__block_sponsor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #c4c4c4;
+            width: 255px;
+            height: 135px;
+        }
+    }
+}

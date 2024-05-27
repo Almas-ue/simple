@@ -1,0 +1,137 @@
+@import "./../var.scss";
+
+.header {
+    border-bottom: 1px solid #ddd;
+    .header_top {
+        display: flex;
+        align-items: center;
+        padding-block: 27px;
+        flex-wrap: wrap;
+
+        .burger_menu {
+            display: none;
+        }
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .menu {
+        display: flex;
+
+        .nav_menu {
+            .ul {
+                display: flex;
+                gap: 60px;
+                .pages {
+                    .link_page {
+                        font-weight: 400;
+                        font-size: 20px;
+                        color: $first_c_text;
+                        transition: 0.4s;
+                        line-height: 23px;
+                        white-space: nowrap;
+
+                        @include hover_text();
+                        @include focus_text();
+                        @include active_text();
+                    }
+                }
+            }
+        }
+        margin-right: 60px;
+    }
+
+    .setting_nav {
+        display: flex;
+        gap: 30px;
+
+        button {
+            width: 24px;
+            height: 24px;
+
+            svg {
+                path {
+                    transition: 0.3s;
+                }
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        stroke: $btn_color;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .header_top {
+            justify-content: space-between;
+            .menu {
+                order: 3;
+                margin-top: 30px;
+                margin-right: 0;
+                width: 100%;
+                display: block;
+
+                .nav_menu {
+                    .ul {
+                        display: flex;
+                        gap: 0;
+                        justify-content: space-between;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .setting_nav {
+                display: flex;
+                order: 2;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    @media screen and (max-width: 510px) {
+        .header{
+            position: relative;
+        }
+        .header_top {
+            padding-block: 11px;
+            align-items: center;
+
+            .logo {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    top: 33px;
+                    border-bottom: 1px solid #ddd;
+                    padding-bottom: 11px;
+                }
+            }
+
+            .burger_menu {
+                margin: 8px 0;
+                display: block;
+                order: 2;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .setting_nav {
+                order: 2;
+            }
+        }
+    }
+}

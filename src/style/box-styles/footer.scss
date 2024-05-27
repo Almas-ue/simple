@@ -1,0 +1,17 @@
+@import "./../var.scss";
+
+.footer {
+    background-color: $first_c_text;
+    padding: 29px;
+
+    .footer__bottom {
+        display: flex;
+        justify-content: space-between;
+
+        .footer__block-media {
+            display: flex;
+            column-gap: 30px;
+            align-items: center;
+        }
+    }
+}
